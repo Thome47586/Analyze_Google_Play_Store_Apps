@@ -98,11 +98,14 @@ month_app = GooglePlayStore.groupby(['year','month'])['app_name'].count().reset_
 month_app.rename(columns={'app_name':'count_app'},inplace=True)
 month_app.head()
 
+
 # Show plot count_app by month/year
 plt.style.use('seaborn-bright')
 plt.figure(figsize=(20,8))
 sns.lineplot(data=month_app,x='month',y='count_app',color='tab:red',hue='year')
 plt.show()
+
+
 
 # Creat Google Play Store before 2019
 gps_2019 = GooglePlayStore[(GooglePlayStore['year'] <= 2019)]
@@ -116,6 +119,8 @@ gps2020_.shape
 year_app = GooglePlayStore.groupby('year')['app_name'].count().reset_index()
 year_app.rename(columns = {'app_name':'count_app'},inplace=True)
 year_app
+
+
 
 # Show plot of count_app by year (2010-2021)
 avg_year_app = year_app['count_app'].mean()
@@ -157,6 +162,7 @@ top10_cate['mean_categorys'] = top10_cate['count_categories'] / top10_cate['coun
 
 # Rate of Top 10 Categories with the most number of Apps on Google Play Store
 top10_cate['count_categories'].count()/count_cate['count_categories'].count()
+
 
 # Distribution chart of Top 10 Categories
 avg_cate = count_cate['count_categories'].mean()
@@ -208,6 +214,7 @@ plt.twinx()
 sns.lineplot(data=top10_cate_final,x='category',y='rating_count',color='tab:red') # Show rating_count per category
 plt.show
 
+
 # Distribution chart of Top 10 Categories
 avg_cate = count_cate['count_categories'].mean()
 install_count_cate = GooglePlayStore['maximum_installs'].mean()
@@ -229,8 +236,6 @@ plt.show()
 
 
 
-
-
 # Creat dictionary ['Productivity','Tools','Education']
 tool_productivity_edu_dict = ['Productivity','Tools','Education']
 
@@ -247,6 +252,8 @@ count_gps_2019_tool_productivity_edu = gps_2019_tool_productivity_edu.groupby('c
 count_gps_2019_tool_productivity_edu.rename(columns={'app_name':'count_app'},inplace=True)
 count_gps_2019_tool_productivity_edu
 
+
+
 gps2020_.shape
 
 gps2020__tool_productivity_edu =  gps2020_[(gps2020_['category'].isin(tool_productivity_edu_dict))]
@@ -262,6 +269,8 @@ avg_year_app_2019_tpe = count_gps_2019_tool_productivity_edu['count_app'].mean()
 avg_year_app_2020__tpe = count_gps2020__tool_productivity_edu['count_app'].mean() 
 avg_year_app_2019 = gps_2019.groupby('category')['app_name'].count().mean() 
 avg_year_app_2020_ = gps2020_.groupby('category')['app_name'].count().mean()
+
+
 
 plt.style.use('tableau-colorblind10')
 plt.figure(figsize=(15,10))
@@ -308,6 +317,8 @@ rate_app_top10.rename(columns={'app_name':'count_app'},inplace=True)
 rate_app_top10 = rate_app_top10[(rate_app_top10['rating'] > 0)]
 rate_app_top10
 
+
+
 # Show distribution of rating & count_app
 plt.figure(figsize=(15,5))
 sns.barplot(data=rate_app_top10,x='rating',y='count_app')
@@ -347,8 +358,6 @@ plt.show()
 
 
 
-
-
 # Create a mask for paid apps
 is_paid = (GooglePlayStore['price'] > 0) & (GooglePlayStore['price'] < 12)
 price_top10_cate = GooglePlayStore[is_paid & GooglePlayStore['category'].isin(top10_cate_dict) ]
@@ -361,6 +370,8 @@ price_top10_cate_2020
 # Creat price_top10_cate__2019 (Price of Top10 before 2019)
 price_top10_cate__2019 = gps_2019[is_paid & gps_2019['category'].isin(top10_cate_dict) ]
 price_top10_cate__2019
+
+
 
 # Show price_top10_cate_2020 & price_top10_cate__2019
 plt.figure(figsize=(15,8))
