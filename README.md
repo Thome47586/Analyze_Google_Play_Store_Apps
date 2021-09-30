@@ -2,26 +2,53 @@
 
 
 ## Introduction
-This is a dataset that has been collected by Gautham which I found on Kaggle during learn Data Analysis. It provides an overview, useful information to help new learners easily access and practice analysis.
+I found it on Kaggle when studied Data Analysis. It provides an overview, useful information to help new learners easily access and practice analysis.
 
 link: https://www.kaggle.com/ysthehurricane/generate-eda-report-using-pandas-profiling
 
+<img width="875" alt="Screen Shot 2021-09-30 at 10 08 12" src="https://user-images.githubusercontent.com/86963378/135382050-abfcaf61-79e6-44d9-8251-db57139189be.png">
+
+
 ## I. Content EDA
-   ### 1. EDA top 10 categories achirve most interested from user
-   I define a category with the most user interest as the most reviews. Because it represents user reactions and desires. They can commend, contribute or complain only they pay attention to you
-    This is an important signal, developers need to listen to understand user
-    In this section, we'll tackle 3 sub-questions:
-    - Top 10 categories with the most volume apps
-    - Top 10 most installed categories
-    - Ranking rate Top 10 Most Installed Categories
+   ### 1. Define question
+   - Explore top high attention-paid categories. 
+   - Discover paid categories above
+   - Detect developer is the most effective
+ 
+   ### 2. Explore top high attention-paid categories.
+   Rating count is total user's review, who pays attention to categories. 
+   Observe correlation of rating_count with other features.
+   
+   <img width="463" alt="Screen Shot 2021-09-30 at 10 17 00" src="https://user-images.githubusercontent.com/86963378/135385066-07a818dd-bb24-4495-aa7c-477b34cf9d69.png">
+   
+   Find out top high attention-paid categories
+    <img width="875" alt="Screen Shot 2021-09-30 at 10 16 45" src="https://user-images.githubusercontent.com/86963378/135381541-6cd44f0a-675b-4a95-8937-1e4f8104eb3f.png">
+
+**Strategy category ranked first, over 40% ranked second.**
+
     
-   ### 2. in top categories, how can the developers make money? 
-   Everyone knows free app more than but how ratio?
-   In section paid apps which is most efficient between in-app purchase or directly
+   ### 3. Discover paid categories above
+   Discover top 10 categories above and Srategy in paid-section 
+   
+   
+   <img width="875" alt="Screen Shot 2021-09-30 at 11 34 31" src="https://user-images.githubusercontent.com/86963378/135387917-6fc22701-7b29-4691-bb74-d36c1e516950.png">
+   
+   Expose range of price recommended by developers
+
+   <img width="463" alt="Screen Shot 2021-09-30 at 11 34 38" src="https://user-images.githubusercontent.com/86963378/135387930-1ef90d16-42d2-45e7-95ef-67233e74fa32.png">
 
 
-   ### 3. The pricing transition in top categories before and after covid 19
-   Visualize pricing change in top 10 categories
+
+   ### 4. Detect developer is the most effective
+   Actually, only 2 developers own top favorite apps in strategy categories
+   
+   <img width="875" alt="Screen Shot 2021-09-30 at 11 42 17" src="https://user-images.githubusercontent.com/86963378/135388637-1b433ad9-3a47-4683-8233-2e9185bea646.png">
+   
+   We notice IGG.COM is the best development because quantity install and ratingng_count is low but their app is in the top.
+<img width="463" alt="Screen Shot 2021-09-30 at 11 47 34" src="https://user-images.githubusercontent.com/86963378/135389071-f08472d6-84c6-4603-b6e5-e78ef62f0620.png">
+
+   
+   
 
 ## II. Code
 ### 1. Basic exploration
