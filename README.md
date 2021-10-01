@@ -19,7 +19,7 @@ link: https://www.kaggle.com/ysthehurricane/generate-eda-report-using-pandas-pro
    Rating count is total user's review, who pays attention to categories. 
    Observe correlation of rating_count with other features.
    
-   <img width="463" alt="Screen Shot 2021-09-30 at 10 17 00" src="https://user-images.githubusercontent.com/86963378/135385066-07a818dd-bb24-4495-aa7c-477b34cf9d69.png">
+   <img width="875" alt="Screen Shot 2021-09-30 at 10 17 00" src="https://user-images.githubusercontent.com/86963378/135385066-07a818dd-bb24-4495-aa7c-477b34cf9d69.png">
    
    Find out top high attention-paid categories
     <img width="875" alt="Screen Shot 2021-09-30 at 10 16 45" src="https://user-images.githubusercontent.com/86963378/135381541-6cd44f0a-675b-4a95-8937-1e4f8104eb3f.png">
@@ -45,7 +45,8 @@ link: https://www.kaggle.com/ysthehurricane/generate-eda-report-using-pandas-pro
    <img width="875" alt="Screen Shot 2021-09-30 at 11 42 17" src="https://user-images.githubusercontent.com/86963378/135388637-1b433ad9-3a47-4683-8233-2e9185bea646.png">
    
    We notice IGG.COM is the best development because quantity install and ratingng_count is low but their app is in the top.
-<img width="463" alt="Screen Shot 2021-09-30 at 11 47 34" src="https://user-images.githubusercontent.com/86963378/135389071-f08472d6-84c6-4603-b6e5-e78ef62f0620.png">
+   
+<img width="875" alt="Screen Shot 2021-09-30 at 11 47 34" src="https://user-images.githubusercontent.com/86963378/135389071-f08472d6-84c6-4603-b6e5-e78ef62f0620.png">
 
    
    
